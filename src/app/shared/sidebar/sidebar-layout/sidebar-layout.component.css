@@ -1,0 +1,97 @@
+.main-sidebar {
+  width: 250px;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  float: none;
+  z-index: 1048;
+  display: block;
+  /* existing properties */
+  overflow: hidden;
+}
+
+.elevation {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+}
+
+.sidebar-dark-primary {
+  background-color: #00563b;
+}
+
+.brand-link {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem 0.5rem;
+  color: white;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+
+.brand-image {
+  transition: margin 0.3s linear, opacity 0.3s ease, visibility 0.3s ease;
+  width: 40px;
+  float: left;
+}
+
+.brand-text {
+  transition: margin 0.3s linear, opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.sidebar-content {
+  width: 250px;
+  /* existing properties */
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 2rem;
+}
+
+/* This will style the scrollbar track (the part the scrollbar sits in) */
+.sidebar-content::-webkit-scrollbar-track {
+  background-color: #2e2e2e; /* Or any color of your choice */
+}
+
+/* This will style the scrollbar handle */
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #555; /* Or any color of your choice */
+  border-radius: 4px; /* Optional: if you want rounded corners */
+}
+
+/* This will style the scrollbar itself (including the track and handle) */
+.sidebar-content::-webkit-scrollbar {
+  width: 8px; /* Or any width of your choice */
+}
+
+/* Use this to hide the scrollbar but still keep the scrolling functionality */
+.sidebar-content {
+  -ms-overflow-style: none; /* For Internet Explorer, Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.sidebar-content::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+@media (max-width: 992px) {
+  .main-sidebar,
+  .brand-link,
+  .sidebar-content {
+    transition: width 0.3s ease-in-out;
+    width: 0px;
+  }
+  .main-sidebar {
+    box-shadow: none;
+  }
+  .sidebar-content {
+    opacity: 0;
+  }
+}

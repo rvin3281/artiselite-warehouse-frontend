@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.container_center {
+  min-height: 100vh; /* or any other height value you want */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth_box {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.auth_logo {
+  width: 150px;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.tableHeader {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.ngx-datatable.fixed-header
+  .datatable-header
+  .datatable-header-inner
+  .datatable-header-cell {
+  background: #4b6ef7;
+  color: #fff;
+  opacity: 0.9;
+  text-wrap: wrap !important;
+  word-wrap: break-word !important;
+}
+
+.datatable-body {
+  word-wrap: break-word !important;
+}
+
+.ngx-datatable .datatable-body .datatable-body-row > div {
+  align-items: center;
+}
+
+.product-wrapper {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.product-home {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.purchase-wrapper {
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.purchase-link {
+  color: blue;
+  cursor: pointer;
+}
+
+.borderCustom {
+  border: 1px solid black;
+}
+
+@media (min-width: 1200px) {
+  /* .datatable-body {
+    overflow: hidden !important;
+  } */
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+small {
+  color: red;
+  font-weight: 500;
+}

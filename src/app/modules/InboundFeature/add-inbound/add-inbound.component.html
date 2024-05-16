@@ -1,0 +1,141 @@
+<app-main-dashboard-layout>
+  <div header>
+    <div class="main-title">
+      <h3>Add New Inbound</h3>
+    </div>
+  </div>
+  <div content>
+    <form [formGroup]="addInboundForm">
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Inbound Reference:</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="inboundReference"
+        />
+
+        <small
+          *ngIf="
+            addInboundForm.get('inboundReference')?.invalid &&
+            addInboundForm.get('inboundReference')?.touched
+          "
+          >*Inventory ID is required</small
+        >
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Date Received:</label>
+        <input
+          type="text"
+          class="form-control"
+          bsDatepicker
+          [bsConfig]="bsConfig"
+          formControlName="dateReceived"
+        />
+
+        <small
+          *ngIf="
+            addInboundForm.get('dateReceived')?.invalid &&
+            addInboundForm.get('dateReceived')?.touched
+          "
+          >*Date Received is required</small
+        >
+      </div>
+
+      <!-- SELECT PRODUCT SKU -->
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Product SKU:</label>
+        <select type="text" class="form-select" formControlName="productId">
+          <option *ngFor="let sku of psku" [value]="sku.productId">
+            {{ sku.productSKU }}
+          </option>
+        </select>
+        <small
+          *ngIf="
+            addInboundForm.get('productSKU')?.invalid &&
+            addInboundForm.get('productSKU')?.touched
+          "
+          >*Product SKU is required</small
+        >
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Inventory ID:</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="inventoryId"
+          readonly
+        />
+
+        <small
+          *ngIf="
+            addInboundForm.get('inventoryId')?.invalid &&
+            addInboundForm.get('inventoryId')?.touched
+          "
+          >*Inventory ID is required</small
+        >
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Quantity:</label>
+        <input type="number" class="form-control" formControlName="quantity" />
+
+        <small
+          *ngIf="
+            addInboundForm.get('quantity')?.invalid &&
+            addInboundForm.get('quantity')?.touched
+          "
+          >*Quantity is required</small
+        >
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Location:</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="location"
+          readonly
+        />
+
+        <small
+          *ngIf="
+            addInboundForm.get('location')?.invalid &&
+            addInboundForm.get('location')?.touched
+          "
+          >*Location is required</small
+        >
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Remarks:</label>
+        <input type="text" class="form-control" formControlName="remarks" />
+
+        <small
+          *ngIf="
+            addInboundForm.get('remarks')?.invalid &&
+            addInboundForm.get('remarks')?.touched
+          "
+          >*Remarks is required</small
+        >
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <button
+            type="submit"
+            (click)="onSubmit()"
+            class="btn btn-primary w-100"
+          >
+            Save
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button (click)="onCancel()" class="btn btn-danger w-100">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</app-main-dashboard-layout>

@@ -1,0 +1,44 @@
+<app-main-dashboard-layout>
+  <div header>
+    <div class="main-title">
+      <h3>Add New Inventory</h3>
+    </div>
+  </div>
+  <div content>
+    <form [formGroup]="addInventoryForm">
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Product SKU:</label>
+        <input class="form-control" type="text" formControlName="productSKU" />
+        <small
+          *ngIf="
+            addInventoryForm.get('productSKU')?.invalid &&
+            addInventoryForm.get('productSKU')?.touched
+          "
+          >*Product SKU is required</small
+        >
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">In Stock:</label>
+        <input class="form-control" type="text" formControlName="inStock" />
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <button
+            type="submit"
+            (click)="onSubmit()"
+            class="btn btn-primary w-100"
+            [disabled]="!addInventoryForm.valid"
+          >
+            Save
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button (click)="onCancel()" class="btn btn-danger w-100">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</app-main-dashboard-layout>

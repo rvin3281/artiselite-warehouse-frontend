@@ -1,0 +1,186 @@
+<ul class="navbar-nav sidebar-font">
+  <!-- 1st ITEM -->
+  <li class="nav-item medicare-sidebar-item">
+    <a routerLink="" class="nav-link medicare-nav-link">
+      <span>Home</span>
+    </a>
+  </li>
+
+  <!-- 3rd ITEM -->
+  <!-- <li class="nav-item medicare-sidebar-item">
+    <a r routerLink="/view-orders" class="nav-link medicare-nav-link">
+      <span>View Purchase Order</span>
+    </a>
+  </li> -->
+
+  <!-- 2nd ITEM -->
+  <li class="nav-item medicare-sidebar-item">
+    <a (click)="toggleProduct()" class="nav-link medicare-nav-link">
+      <span>Product</span>
+      <mat-icon
+        [class.rotate-icon]="productIconRotated"
+        fontIcon="chevron_right"
+      ></mat-icon
+    ></a>
+    <div
+      [class.dropdown-content-spacing]="productIconRotated"
+      class="dropdown-content"
+    >
+      <ul
+        [class.medicare-dropdown-clicked]="productIconRotated"
+        class="navbar-nav medicare-dropdown"
+      >
+        <li class="nav-item">
+          <a routerLink="/view-product" class="nav-link medicare-dropdown-link">
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>View Products</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/add-product" class="nav-link medicare-dropdown-link">
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>Add New Product</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="nav-item medicare-sidebar-item">
+    <a (click)="toggleInventory()" class="nav-link medicare-nav-link">
+      <span>Inventory</span>
+      <mat-icon
+        [class.rotate-icon]="inventoryIconRotated"
+        fontIcon="chevron_right"
+      ></mat-icon
+    ></a>
+    <div
+      [class.dropdown-content-spacing]="inventoryIconRotated"
+      class="dropdown-content"
+    >
+      <ul
+        [class.medicare-dropdown-clicked]="inventoryIconRotated"
+        class="navbar-nav medicare-dropdown"
+      >
+        <li class="nav-item">
+          <a
+            routerLink="/view-inventory"
+            class="nav-link medicare-dropdown-link"
+          >
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>View Inventory</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/add-inventory"
+            class="nav-link medicare-dropdown-link"
+          >
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>Add New Inventory</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="nav-item medicare-sidebar-item">
+    <a (click)="toggleInbound()" class="nav-link medicare-nav-link">
+      <span>Inbound</span>
+      <mat-icon
+        [class.rotate-icon]="inboundIconRotated"
+        fontIcon="chevron_right"
+      ></mat-icon
+    ></a>
+    <div
+      [class.dropdown-content-spacing]="inboundIconRotated"
+      class="dropdown-content"
+    >
+      <ul
+        [class.medicare-dropdown-clicked]="inboundIconRotated"
+        class="navbar-nav medicare-dropdown"
+      >
+        <li class="nav-item">
+          <a routerLink="/view-inbound" class="nav-link medicare-dropdown-link">
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>View Inbound</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/add-inbound" class="nav-link medicare-dropdown-link">
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>Add New Inbound</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="nav-item medicare-sidebar-item">
+    <a (click)="toggleOutbound()" class="nav-link medicare-nav-link">
+      <span>Outbound</span>
+      <mat-icon
+        [class.rotate-icon]="outboundIconRotated"
+        fontIcon="chevron_right"
+      ></mat-icon
+    ></a>
+    <div
+      [class.dropdown-content-spacing]="outboundIconRotated"
+      class="dropdown-content"
+    >
+      <ul
+        [class.medicare-dropdown-clicked]="outboundIconRotated"
+        class="navbar-nav medicare-dropdown"
+      >
+        <li class="nav-item">
+          <a
+            routerLink="/view-outbound"
+            class="nav-link medicare-dropdown-link"
+          >
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>View Outbound</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/add-outbound" class="nav-link medicare-dropdown-link">
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>Add New Outbound</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+  <!-- 4th ITEM -->
+  <!-- <li class="nav-item medicare-sidebar-item">
+    <a (click)="toggleCustomers()" class="nav-link medicare-nav-link">
+      <span>Customers</span>
+      <mat-icon fontIcon="chevron_right"></mat-icon
+    ></a>
+    <div
+      [class.dropdown-content-spacing]="customerIconRotated"
+      class="dropdown-content"
+    >
+      <ul
+        [class.medicare-dropdown-clicked]="customerIconRotated"
+        class="navbar-nav medicare-dropdown"
+      >
+        <li class="nav-item">
+          <a
+            routerLink="/view-customers"
+            class="nav-link medicare-dropdown-link"
+          >
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>View Customers</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/add-customer" class="nav-link medicare-dropdown-link">
+            <mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+            <span>Create New Customers</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li> -->
+</ul>

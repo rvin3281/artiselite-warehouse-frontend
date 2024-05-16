@@ -1,0 +1,64 @@
+.sidebar-font {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.medicare-sidebar-item {
+  background-color: #32de84;
+  margin: 0.5rem 0;
+}
+
+.medicare-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem 0.7rem 1rem;
+}
+
+.rotate-icon {
+  transform: rotate(90deg);
+  transition: transform 0.1s ease-in-out;
+}
+
+.medicare-nav-link .mat-icon:not(.rotate-icon) {
+  transform: rotate(0deg);
+  transition: transform 0.1s ease-in-out;
+}
+
+.dropdown-content:not(dropdown-content-spacing) {
+  overflow: hidden;
+}
+
+.medicare-dropdown {
+  overflow: hidden;
+}
+
+.medicare-dropdown:not(.medicare-dropdown-clicked) {
+  max-height: 0;
+  height: auto;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.medicare-dropdown-clicked {
+  max-height: 150px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.medicare-dropdown-link {
+  padding: 0.7rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.medicare-dropdown-link:hover {
+  background-color: white;
+}
+
+.medicare-sidebar-item {
+  cursor: pointer;
+}
+
+.nav-link span {
+  font-size: 0.8rem;
+}

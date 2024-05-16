@@ -1,0 +1,131 @@
+<app-main-dashboard-layout>
+  <div header>
+    <div class="main-title">
+      <h3>View Product</h3>
+    </div>
+  </div>
+
+  <div content>
+    <ngx-datatable
+      #table
+      class="material"
+      [columnMode]="ColumnMode.force"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [loadingIndicator]="loadingIndicator"
+      [scrollbarH]="true"
+      [limit]="10"
+      [rows]="rows"
+    >
+      <ngx-datatable-column prop="productId">
+        <ng-template
+          let-column="column"
+          ngx-datatable-header-template
+          let-sort="sortFn"
+        >
+          <span class="tableHeader">ID</span>
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column prop="productSKU">
+        <ng-template
+          let-column="column"
+          ngx-datatable-header-template
+          let-sort="sortFn"
+        >
+          <span class="tableHeader">Product SKU</span>
+        </ng-template>
+        <!-- BENEFIT OF USING THE ROW -->
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column prop="productName">
+        <ng-template
+          let-column="column"
+          ngx-datatable-header-template
+          let-sort="sortFn"
+        >
+          <span class="tableHeader">Product Name</span>
+        </ng-template>
+        <!-- BENEFIT OF USING THE ROW -->
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column prop="category">
+        <ng-template
+          let-column="column"
+          ngx-datatable-header-template
+          let-sort="sortFn"
+        >
+          <span class="tableHeader">Category</span>
+        </ng-template>
+        <!-- BENEFIT OF USING THE ROW -->
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column prop="location">
+        <ng-template
+          let-column="column"
+          ngx-datatable-header-template
+          let-sort="sortFn"
+        >
+          <span class="tableHeader">Location</span>
+        </ng-template>
+        <!-- BENEFIT OF USING THE ROW -->
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column prop="supplier">
+        <ng-template
+          let-column="column"
+          ngx-datatable-header-template
+          let-sort="sortFn"
+        >
+          <span class="tableHeader">Supplier</span>
+        </ng-template>
+        <!-- BENEFIT OF USING THE ROW -->
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column prop="createdDateTime">
+        <ng-template
+          let-column="column"
+          ngx-datatable-header-template
+          let-sort="sortFn"
+        >
+          <span class="tableHeader">Created Date</span>
+        </ng-template>
+        <!-- BENEFIT OF USING THE ROW -->
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value | date : "longDate" }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column>
+        <!-- [frozenRight]="true" -->
+        <!-- Header -->
+        <ng-template ngx-datatable-header-template>
+          <span class="tableHeader">Action</span>
+        </ng-template>
+        <!-- Data -->
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <div class="d-flex gap-1">
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+          </div>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</app-main-dashboard-layout>
